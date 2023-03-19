@@ -1,0 +1,417 @@
+/** @format */
+
+@import './components/reset';
+@import './components/fonts';
+@import './components/colors';
+@import './components/mixins';
+
+body {
+	display: flex;
+	justify-content: center;
+
+	.container {
+		min-height: 100vh;
+		max-width: 80%;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		background-color: $light;
+		font-size: 2.8rem;
+		position: relative;
+
+		.nav {
+			min-width: 100%;
+			display: grid;
+			grid-template-columns: 1fr 6fr;
+			border-bottom: 1px solid $white;
+
+			&__logo {
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				img {
+					padding-left: 1em;
+					width: 80%;
+				}
+			}
+
+			&__box {
+				display: flex;
+				align-items: center;
+				justify-content: right;
+				margin-right: 0.5em;
+				font-size: 2.5rem;
+				font-family: $cormorant;
+				color: $dark;
+
+				&--link {
+					text-decoration: none;
+					padding: 1em 0.5em;
+					padding-bottom: 0;
+					position: relative;
+					transition: 0.3s;
+				}
+			}
+		}
+
+		.one::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 2px;
+			width: 100%;
+			background-color: #4f313e;
+			transform: scaleX(0);
+			transition: transform 0.3s;
+			transform-origin: right;
+		}
+
+		.one:hover::after {
+			transform: scaleX(1);
+			transform-origin: left;
+		}
+
+		.main {
+			display: grid;
+			grid-template-columns: 1/-1;
+			justify-content: center;
+			min-height: 90vh;
+			min-width: 100%;
+			background-image: url(../../dist/img/glowne.jpg);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.aboutme {
+			min-height: 100vh;
+			display: grid;
+			grid-column: 1/-1;
+			border-top: 1px solid $white;
+
+			&__wrap {
+				max-width: 55%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			&__text {
+				font-size: 2.2rem;
+				margin-left: 0.4em;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				line-height: 2;
+				font-family: $cormorant;
+				color: $dark;
+
+				h1 {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 100%;
+					padding: 0.3em;
+					padding-top: 0;
+					text-decoration: underline;
+				}
+				p {
+					text-indent: 1em;
+					text-align: justify;
+					padding: 0.2em;
+				}
+
+				strong {
+					padding-bottom: 1em;
+				}
+			}
+		}
+
+		.nav_offers {
+			width: 100%;
+			margin-bottom: 0.1em;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-bottom: 2px solid $white;
+			box-shadow: 8px 8px 24px 0px $white;
+
+			a {
+				padding: 0.7em;
+				color: $dark;
+				text-decoration: none;
+				font-weight: 600;
+				transition: color border 0.5s;
+			}
+
+			a:hover {
+				color: $white;
+				// font-family: $tiliana;
+				border-bottom: 3px solid $dark;
+			}
+		}
+
+		.offers {
+			display: flex;
+			flex-direction: column;
+			font-family: $cormorant;
+			@include offers;
+
+			&__pic {
+				@include pic;
+			}
+
+			&__pic-second {
+				@include pic;
+				background-color: #af9ea4;
+
+				#noworodek {
+					background-color: #af9ea4;
+				}
+			}
+			&__pic-three {
+				@include pic;
+				background-color: #d9c7d7;
+
+				#urodziny {
+					background-color: #d9c7d7;
+				}
+			}
+
+			&__pic-four {
+				@include pic;
+				background-color: #85949f;
+
+				#rodzina {
+					background-color: #85949f;
+				}
+			}
+			&__pic-five {
+				@include pic;
+				background-color: #9d6479;
+
+				#kobieca {
+					background-color: #9d6479;
+				}
+			}
+			&__pic-six {
+				@include pic;
+				background-color: #c0666f;
+
+				#biznesowa {
+					background-color: #c0666f;
+				}
+			}
+		}
+	}
+
+	.portfolio {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		h2 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0.5em;
+			margin-bottom: 0.2em;
+
+			font-family: $cormorant;
+			text-decoration: underline;
+		}
+
+		&__box {
+			min-height: 90%;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			font-family: $cormorant;
+			color: $dark;
+
+			&--1 {
+				@include photo-box;
+				background-image: url('../../dist/img/ciaza1.jpg');
+				background-position: -3rem;
+			}
+
+			&--2 {
+				@include photo-box;
+				background-image: url('../../dist/img/noworodek.jpg');
+			}
+
+			&--3 {
+				@include photo-box;
+				background-image: url('../../dist/img/rodzinna.jpg');
+				background-position-y: -1rem;
+			}
+
+			&--4 {
+				@include photo-box;
+				background-image: url('../../dist/img/kobieca.jpg');
+				background-position-y: -0.5rem;
+			}
+
+			&--5 {
+				@include photo-box;
+				background-image: url('../../dist/img/roczek.jpg');
+			}
+			&--6 {
+				@include photo-box;
+				background-image: url('../../dist/img/biznesowa.jpg');
+				background-position-y: -3rem;
+			}
+		}
+	}
+
+	.map {
+		margin-bottom: 2em;
+		border: 3px solid #9b9898;
+		border: 3px double #504d4d;
+	}
+	.contact__container {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		font-family: $cormorant;
+		background-color: $white;
+	}
+
+	.contact__container p {
+		padding: 0.2em 6.5em;
+		transition: transform 0.3s;
+	}
+
+	.contact__container p:hover {
+		transform: scale(1.1);
+	}
+
+	.contact__container i {
+		padding-left: 1em;
+		padding-right: 0.6em;
+		color: $dark;
+	}
+
+	.contact__container a {
+		text-decoration: none;
+		list-style: none;
+		color: $dark;
+	}
+
+	.contact__container {
+		display: flex;
+		justify-content: center;
+		align-items: left;
+		flex-direction: column;
+		background-color: $white;
+	}
+
+	.fas {
+		padding-right: 1em;
+		font-size: 1.5rem;
+		color: $dark;
+	}
+
+	.footer {
+		min-height: 10vh;
+		min-width: 100%;
+		display: grid;
+		grid-template-columns: 1/-1;
+		grid-template-rows: 1/3;
+		justify-content: center;
+		align-items: center;
+		font-family: $cormorant;
+		color: $dark;
+		border-top: 1px solid $white;
+		border-bottom: 1px solid $white;
+	}
+}
+
+.return {
+	display: none;
+	position: fixed;
+	bottom: 0.8em;
+	right: 1.2em;
+	font-size: 5rem;
+	width: 1.1em;
+	height: 1.1em;
+	background-color: inherit;
+	border: none;
+	border-radius: 50%;
+	box-shadow: 5px 5px 5px 0px $dark;
+	cursor: pointer;
+	transition: background-color 0.8s;
+}
+
+.return:hover {
+	background-color: #231717;
+}
+
+.fa-solid {
+	display: block;
+	color: $dark;
+	font-size: 4rem;
+	transition: color 0.8s;
+}
+
+.return:hover .fa-solid {
+	color: $white;
+}
+
+.cookie__box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+	padding: 1em;
+	height: 150px;
+	width: 80%;
+	font-size: 3rem;
+	background-color: $white;
+	text-align: center;
+	background-color: #d9c7d7;
+	font-family: $cormorant;
+	opacity: 0;
+	transform: translateY(100%);
+	animation: show-cookies 0.5s 0.5s forwards;
+
+	&--text {
+		font-size: 3rem;
+	}
+	&--btn {
+		margin-top: 0.5em;
+		padding: 0.5em 1em;
+		font-size: 2rem;
+		font-family: $cormorant;
+		border: 2px solid $white;
+		border-radius: 6px;
+		transition: background-color 0.3s;
+		cursor: pointer;
+	}
+	&--btn:hover {
+		background-color: $dark;
+		color: $white;
+		font-weight: 600;
+	}
+}
+
+.active {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+
+@keyframes show-cookies {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

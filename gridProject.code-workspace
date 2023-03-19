@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../gridProject"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "under"
+	}
+}
