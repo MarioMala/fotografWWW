@@ -1,0 +1,23 @@
+/** @format */
+
+@keyframes menu1 {
+	from {
+		opacity: 0;
+		transform: rotate(36deg);
+	}
+	to {
+		opacity: 1;
+		transform: rotate(0);
+	}
+}
+
+@keyframes menu2 {
+	from {
+		opacity: 0;
+		transform: scale(0.6) translateY(-40px);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1) translateY(-0);
+	}
+}
