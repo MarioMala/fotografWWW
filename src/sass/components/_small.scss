@@ -1,0 +1,30 @@
+/** @format */
+
+@media (max-width: 600px) {
+	.nav__box li{
+		display: none;
+	}
+
+    .nav__box a {
+        display: none;
+    }
+
+   .aboutme h1 {
+    font-size: 2rem;
+   }
+   .aboutme span {
+    font-size: 1.2rem;
+   }
+   .aboutme p {
+    font-size: 1rem;
+   }
+
+   .aboutme .wrap{
+    width: 100%;
+   }
+
+   
+	
+
+
+}

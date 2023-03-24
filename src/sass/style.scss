@@ -157,6 +157,7 @@ body {
 			background-repeat: no-repeat;
 		}
 
+
 		.aboutme {
 			min-height: 100vh;
 			display: grid;
@@ -200,30 +201,6 @@ body {
 				}
 			}
 		}
-
-		// .nav_offers {
-		// 	width: 100%;
-		// 	margin-bottom: 0.1em;
-		// 	display: flex;
-		// 	align-items: center;
-		// 	justify-content: center;
-		// 	border-bottom: 2px solid $white;
-		// 	box-shadow: 8px 8px 24px 0px $white;
-
-		// 	a {
-		// 		padding: 0.7em;
-		// 		color: $dark;
-		// 		text-decoration: none;
-		// 		font-weight: 600;
-		// 		transition: color border 0.5s;
-		// 	}
-
-		// 	a:hover {
-		// 		color: $white;
-		// 		// font-family: $tiliana;
-		// 		border-bottom: 3px solid $dark;
-		// 	}
-		// }
 
 		.offers {
 			display: flex;
@@ -340,6 +317,7 @@ body {
 	}
 
 	.map {
+		margin-top: 1em;
 		margin-bottom: 2em;
 		border: 3px solid #9b9898;
 		border: 3px double #504d4d;
@@ -480,9 +458,5 @@ body {
 	display: none;
 }
 
-@keyframes show-cookies {
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
+@import './components/small';
+@import './components/medium';
