@@ -1,29 +1,43 @@
 /** @format */
 
-@media (max-width: 600px) {
-	.nav__box li{
+@media (max-width: 583px) {
+	.nav__box li {
 		display: none;
 	}
 
-    .nav__box a {
-        display: none;
-    }
+	.nav__box a {
+		display: none;
+	}
 
-   .aboutme h1 {
-    font-size: 2rem;
-   }
-   .aboutme span {
-    font-size: 1.2rem;
-   }
-   .aboutme p {
-    font-size: 1rem;
-   }
+	.aboutme h1 {
+		font-size: 2rem;
+	}
+	.aboutme span {
+		font-size: 1.2rem;
+	}
+	.aboutme p {
+		font-size: 1rem;
+	}
 
-   .aboutme .wrap{
-    width: 100%;
-   }
+	.aboutme__wrap {
+		min-width: 90%;
+	}
 
-   
+	strong {
+		font-size: 1.2rem;
+		text-align: center;
+	}
+
+
+
+	#offers h1 {
+		font-size: 1.5rem;
+	}
+
+	.offers__pic {
+		@include pic-mobile;
+	}
+
 	
 
 
