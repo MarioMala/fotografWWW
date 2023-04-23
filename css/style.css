@@ -66,6 +66,58 @@ p {
   font-size: 1.7rem;
 }
 
+h2 {
+  min-width: 100%;
+  padding-right: 1rem;
+  padding-bottom: 0.5em;
+  color: #231717;
+  text-align: right;
+  text-decoration: underline;
+}
+
+.mini,
+.normal {
+  margin-bottom: 1em;
+}
+
+.mini span,
+.normal span,
+.vip span {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.mini li,
+.normal li,
+.vip li {
+  font-size: 1.8rem;
+}
+
+.mini p,
+.normal p,
+.vip p {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.how,
+.when {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+span {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+p {
+  padding: 0.3em;
+  font-size: 1.7rem;
+}
+
 /** @format */
 @keyframes menu1 {
   from {
@@ -892,7 +944,7 @@ body .footer {
 }
 
 /** @format */
-@media (max-width: 600px) {
+@media (max-width: 583px) {
   .nav__box li {
     display: none;
   }
@@ -915,18 +967,40 @@ body .footer {
     font-size: 1.2rem;
     text-align: center;
   }
-  .offers {
-    display: grid;
-    grid-column: 1/-1;
-  }
-  .offers h1 {
+  #offers h1 {
     font-size: 1.5rem;
   }
-  .offers__pic {
-    grid-template-columns: 1fr;
+  .offers__pic h1 {
+    text-align: center;
+    min-width: 100%;
+    padding: 0.3em;
+    background-color: #4f313e;
+    color: #fff;
   }
-  .offers__pic--text h2 {
-    font-size: 2rem;
+  .offers__pic--text {
+    grid-column: 1/-1;
+    margin-left: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #885168;
+  }
+  .offers__pic__info {
+    width: 50%;
+    margin: 1em;
+    margin-top: 0;
+  }
+  .offers__pic__info h2 {
+    font-size: 2.4rem;
+    font-family: "Tillana", cursive;
+  }
+  .offers__pic__info p {
+    font-size: 1.8rem;
+    text-indent: 2em;
+  }
+  .offers__pic__info p::first-letter {
+    color: #fff;
+    font-size: 3rem;
   }
 }
 /** @format *//*# sourceMappingURL=style.css.map */

@@ -28,17 +28,66 @@
 		text-align: center;
 	}
 
-
-
 	#offers h1 {
 		font-size: 1.5rem;
 	}
 
-	.offers__pic {
-		@include pic-mobile;
+	body .container .offers__pic--img {
+		grid-column: 1/-1;
+		align-items: flex-end;
 	}
 
-	
+	body .container .offers__pic--img img {
+		width: 100%;
+		text-align: center;
+		transform: rotate(0deg);
+	}
 
+	body .container .offers__pic--text {
+		grid-column: 1/-1;
+	}
 
+	body .container .offers__pic--text span {
+		font-size: 1.5rem;
+		text-align: center;
+	}
+	body .container .offers__pic--text li {
+		font-size: 1.4rem;
+		text-align: center;
+	}
+	body .container .offers__pic--text p {
+		font-size: 1.4rem;
+		text-align: center;
+	}
+
+	h2#ciaza {
+		font-size: 2rem;
+		text-align: center;
+		justify-content: center;
+	}
+	#noworodek h2 {
+		font-size: 2rem;
+		text-align: center;
+		justify-content: center;
+	}
+	#urodziny h2 {
+		font-size: 2rem;
+		text-align: center;
+		justify-content: center;
+	}
+	#rodzina h2 {
+		font-size: 2rem;
+		text-align: center;
+		justify-content: center;
+	}
+	#kobieca h2 {
+		font-size: 2rem;
+		text-align: center;
+		justify-content: center;
+	}
+	#biznesowa h2 {
+		font-size: 2rem;
+		text-align: center;
+		justify-content: center;
+	}
 }
