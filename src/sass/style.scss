@@ -9,6 +9,7 @@
 body {
 	display: flex;
 	justify-content: center;
+	position: relative;
 
 	.container {
 		min-height: 100vh;
@@ -137,6 +138,36 @@ body {
 			transform-origin: left;
 		}
 
+		.burger {
+			display: none;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			min-width: 100%;
+			min-height: 100%;
+			margin-top: 0.3em;
+			background-color: inherit;
+			outline: none;
+			cursor: pointer;
+		}
+
+		.line {
+			min-width: 3em;
+			height: 0.3em;
+			background-color: $dark;
+			margin: 0.3em;
+			border-radius: 6px;
+			transition: all 0.5s ease-in-out;
+		}
+
+		.active {
+			display: flex;
+		}
+
+		.hide {
+			display: none;
+		}
+
 		.main {
 			display: grid;
 			grid-template-columns: 1/-1;
@@ -192,6 +223,7 @@ body {
 				}
 			}
 		}
+
 
 		.offers {
 			display: flex;
@@ -342,7 +374,6 @@ body {
 		list-style: none;
 		color: $dark;
 	}
-
 
 	.fas {
 		padding-right: 1em;
