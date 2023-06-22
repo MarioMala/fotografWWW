@@ -7,14 +7,6 @@
 		position: relative;
 	}
 
-	.nav__box li {
-		display: none;
-	}
-
-	.nav__box a {
-		display: none;
-	}
-
 	.aboutme h1 {
 		font-size: 2.2rem;
 	}
@@ -26,7 +18,7 @@
 	}
 
 	.aboutme__wrap {
-		min-width: 90%;
+		min-width: 100%;
 	}
 
 	strong {
@@ -211,10 +203,6 @@
 		z-index: 10;
 	}
 
-	.nav__mobile--burger #burger .line {
-		color: red;
-	}
-
 	body .container .nav-mobile {
 		display: flex;
 		min-width: 100%;
@@ -237,9 +225,8 @@
 		left: 0;
 		bottom: 0;
 		z-index: 10;
-		
 		background-color: #d9c7d7;
-		opacity: 0.6;
+		opacity: 0.8;
 	}
 
 	#burger span.line {
@@ -257,18 +244,41 @@
 	}
 
 	.nav__box-mobile .menu-item-mobile {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		list-style-type: none;
 	}
 
+	.nav__box-mobile .menu-item-mobile .offers {
+		border-bottom: 2px solid black;
+		font-weight: bold;
+	}
+
 	.nav__box-mobile .menu-item-mobile a {
-		font-size: 3rem;
+		font-size: 2rem;
 		color: $black;
 		text-decoration: none;
 		display: flex;
-		justify-content: left;
-		padding-top: 1.3rem;
-		font-weight: 900;
-		font-family: $cormorant;
+		justify-content: flex-start;
+		padding-top: 1.2rem;
+		font-family: $darker;
+		font-style: italic;
+	}
+
+.nav__box-mobile .menu-item-mobile a img {
+	width: 10%;
+	padding-right: 2rem;
+	margin-left: 4rem;
+	border-radius: 50%;
+}
+
+	.fa-solid {
+		display: flex;
+		color: $dark;
+		font-size: 4rem;
+		transition: color 0.8s;
 	}
 
 	.return {
@@ -277,6 +287,5 @@
 
 	.active {
 		display: flex;
-		z-index: 21;
 	}
 }
